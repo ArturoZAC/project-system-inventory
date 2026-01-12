@@ -17,6 +17,7 @@ return new class extends Migration {
             $table->integer('slots_ram');
             $table->string('tipo_ram_compatible');
             $table->integer('slots_ram_usados')->default(0);
+            $table->enum('estado', ['activo', 'no_activo', 'baja'])->default('activo');
             $table->timestamps();
         });
     }
